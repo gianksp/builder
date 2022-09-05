@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import grapesjs from 'grapesjs'
 import PluginTailwind from 'grapesjs-tailwind';
-import PluginEditorPanelButtons from 'components/Editor/Panel/Buttons';
-import * as LandingPage from 'templates/LandingPage';
+import PluginEditorPanelButtons from 'lib/Editor/Panel/Buttons';
+import * as LandingPage from 'lib/templates/LandingPage';
 
 const Editor = () => {
 

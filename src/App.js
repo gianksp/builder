@@ -1,6 +1,5 @@
 import React from 'react';
-import Editor from 'components/Editor';
-import 'assets/sass/styles.scss';
+import { Editor } from 'lib';
 import { DappifyProvider } from 'react-dappify';
 
 function App() {
