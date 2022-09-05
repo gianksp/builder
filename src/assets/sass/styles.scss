@@ -1,0 +1,92 @@
+// Palette variables
+$primaryColor: #1d2023;
+$secondaryColor: #fffc;
+$tertiaryColor: #ec5896;
+$quaternaryColor: #00e6e6;
+
+body {
+  margin: 0px;
+}
+
+
+@import 'material-icons/iconfont/material-icons.css';
+@import 'grapesjs/src/styles/scss/main.scss';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+// Devices
+.device-tablet {
+  padding-top: 8px;
+}
+
+.gjs-pn-btn {
+  min-height: 34px;
+  min-width: 44px;
+  line-height: 21px;
+  padding: 6px 10px;
+  margin-right: 0px;
+}
+
+.gjs-pn-btn svg {
+  fill: transparent;
+  display: block;
+  margin: 0 auto;
+  height: 24px;
+}
+
+.gjs-pn-panel {
+  padding: 2px;
+}
+
+.gjs-pn-btn.gjs-pn-active {
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 3px rgba(0, 255, 251, 0.15) inset;
+}
+
+.gjs-pn-btn:hover::before {
+  color: $quaternaryColor;
+  box-shadow: 0 5px 15px $quaternaryColor;
+}
+
+// Panels
+.gjs-pn-views-container {
+  padding-top: 40px;
+}
+
+.gjs-layer-caret {
+  padding: 8px 2px;
+}
+
+.gjs-pn-views-container {
+  width: 15%;
+  z-index: 1;
+}
+
+// Modal
+.gjs-mdl-dialog {
+  border-radius: 5px;
+  padding: 8px;
+}
+
+.gjs-mdl-container {
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+// .gjs-block-label {  
+//   border: 2px solid $secondaryColor;
+//   border-radius: 12px;
+// }
+
+.gjs-block-label svg {
+  width: 100%;
+}
+
+.gjs-block {
+  width: 100%;
+  margin: 1%;
+  padding: 0px 15px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.05);
+}
