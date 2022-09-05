@@ -64,6 +64,18 @@ $ cd studio
 $ yarn
 ```
 
+Create .env
+
+```
+SKIP_PREFLIGHT_CHECK=true
+NODE_PATH=src/
+SKIP_PREFLIGHT_CHECK=true
+REACT_APP_MIXPANEL_ID=<ID>
+REACT_APP_MORALIS_APP_ID=<ID>
+REACT_APP_MORALIS_SERVER_URL=<URL>
+REACT_APP_HOST_ENV=local
+```
+
 Start the dev server
 
 ```sh
