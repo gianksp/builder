@@ -11,14 +11,15 @@
     "grapesjs-tooltip": "^0.1.5",
     "material-icons": "^1.11.8",
     "react": "^18.2.0",
+    "react-dappify": "^1.0.2",
     "react-dom": "^18.2.0",
-    "react-scripts": "^5.0.1",
+    "react-scripts": "^4.0.3",
     "sass": "^1.54.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "export HTTPS=true&&SSL_CRT_FILE=cert.pem&&SSL_KEY_FILE=key.pem env-cmd -f .env react-scripts start",
+    "build": "env-cmd -f .env react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -43,6 +44,14 @@
   "devDependencies": {
     "autoprefixer": "^10.4.8",
     "postcss": "^8.4.14",
-    "tailwindcss": "^3.1.7"
+    "tailwindcss": "^3.1.7",
+    "cross-env": "^7.0.3",
+    "env-cmd": "^10.1.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.6",
+    "eslint-config-prettier": "^8.5.0",
+    "husky": "^8.0.1",
+    "lint-staged": ">=10",
+    "prettier": "^2.7.1"
   }
 }

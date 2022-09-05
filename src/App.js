@@ -1,13 +1,16 @@
 import React from 'react';
 import Editor from 'components/Editor';
 import 'assets/sass/styles.scss';
+import { DappifyProvider } from 'react-dappify';
 
 function App() {
 
   return (
-    <div className="App">
-      <Editor/>
-    </div>
+    <DappifyProvider>
+      <div className="App">
+        <Editor/>
+      </div>
+    </DappifyProvider>
   );
 }
 

@@ -1,4 +1,4 @@
-# [Dappify Studio ✨](http://grapesjs.com)
+# [Dappify Builder ✨](http://grapesjs.com)
 
 [![Build Status](https://github.com/DappifyWeb3/studio/actions/workflows/build.yml/badge.svg)](https://github.com/DappifyWeb3/studio/actions)
 [![Chat](https://img.shields.io/badge/chat-discord-7289da.svg)](https://discord.gg/CYYX8yUVgc)
@@ -7,7 +7,7 @@
 <p align="center"><img src="https://storage.googleapis.com/ethglobal-api-production/projects%2Fawy06%2Fimages%2FScreenshot%202022-07-23%20at%2021.56.32.png" alt="Dappify" width="500" align="center"/></p>
 
 
-Dappify Studio is a multi-purpose web dApp builder CMS with composable modules, similar to “legos”, that users drag and drop into a canvas for a WYSIWYG experience. These modules are composable and interoperable meaning they can talk to each other. It uses [GrapesJS](http://grapesjs.com) as drag and drop editor. To better understand this concept check the image below
+Dappify Builder is a multi-purpose web dApp builder CMS with composable modules, similar to “legos”, that users drag and drop into a canvas for a WYSIWYG experience. These modules are composable and interoperable meaning they can talk to each other. It uses [GrapesJS](http://grapesjs.com) as drag and drop editor. To better understand this concept check the image below
 
 <br/>
 <p align="center"><img src="http://grapesjs.com/img/gjs-concept.png" alt="GrapesJS - Style Manager" height="400" align="center"/></p>
@@ -16,7 +16,7 @@ Dappify Studio is a multi-purpose web dApp builder CMS with composable modules, 
 Generally any 'template system', that you'd find in various applications like CMS, is composed by the **structure** (HTML), **style** (CSS) and **variables**, which are then replaced with other templates and contents on server-side and rendered on client.
 
 You can visit the live builder:<br/>
-Dappify Studio - http://dappify.com<br/>
+Dappify - http://dappify.com<br/>
 
 
 ## Table of contents
@@ -29,8 +29,8 @@ Dappify Studio - http://dappify.com<br/>
 * [Testing](#testing)
 * [Plugins](#plugins)
 * [Support](#support)
-* [Changelog](https://github.com/DappifyWeb3/studio/releases)
-* [Contributing](https://github.com/DappifyWeb3/studio/blob/master/CONTRIBUTING.md)
+* [Changelog](https://github.com/DappifyWeb3/builder/releases)
+* [Contributing](https://github.com/DappifyWeb3/builder/blob/master/CONTRIBUTING.md)
 * [License](#license)
 
 
@@ -59,7 +59,7 @@ TBD
 Clone the repository and install all the necessary dependencies (`yarn` is highly recommended)
 
 ```sh
-$ git clone https://github.com/DappifyWeb3/studio.git
+$ git clone https://github.com/DappifyWeb3/builder.git
 $ cd studio
 $ yarn
 ```

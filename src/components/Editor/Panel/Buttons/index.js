@@ -21,6 +21,7 @@ const Plugin = (editor, config) => {
     const obl = 'open-blocks';
     const ful = 'fullscreen';
     const prv = 'preview';
+    const backProfile = 'back-profile';
   
     eConfig.showDevices = 0;
   
@@ -320,6 +321,7 @@ const Plugin = (editor, config) => {
         run: (ed) => ed.setDevice('Mobile portrait'),
         stop: () => {},
     });
+
 
 }
 
