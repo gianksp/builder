@@ -1,5 +1,5 @@
-import 'lib/assets/sass/styles.scss';
-import Editor from 'lib/Editor';
+import './assets/sass/styles.scss';
+import Editor from './Editor';
 
 export {
     Editor

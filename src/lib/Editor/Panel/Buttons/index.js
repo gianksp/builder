@@ -1,5 +1,5 @@
-import LoginModal from "lib/views/modal/Login";
-import PublishModal from "lib/views/modal/Publish";
+import LoginModal from "../../../views/modal/Login";
+import PublishModal from "../../../views/modal/Publish";
 
 const
   cmdImport = 'gjs-open-import-webpage',
