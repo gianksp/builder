@@ -1,13 +1,64 @@
 import LoginModal from "lib/views/modal/Login";
+import PublishModal from "lib/views/modal/Publish";
 
 const
   cmdImport = 'gjs-open-import-webpage',
+  cmdPublish = 'publish',
   cmdDeviceDesktop = 'set-device-desktop',
   cmdDeviceTablet = 'set-device-tablet',
   cmdDeviceMobile = 'set-device-mobile',
   cmdClear = 'canvas-clear',
   publish = 'publish-ipfs';
   
+const clearCanvasButton = {
+  id: cmdClear,
+  // className: 'fa fa-trash',
+  command: e => e.runCommand(cmdClear),
+  attributes: { title: 'Clear Canvas'},
+  label: `
+      <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="10" y1="11" x2="10" y2="17"></line>
+          <line x1="14" y1="11" x2="14" y2="17"></line>
+          <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
+          <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
+      </svg>
+  `
+}
+
+const publishButton = {
+  id: cmdPublish,
+  command: e => e.runCommand(cmdPublish),
+  attributes: { title: 'Publish'},
+  label: `
+    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-rocket" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+      <path d="M4 13a8 8 0 0 1 7 7a6 6 0 0 0 3 -5a9 9 0 0 0 6 -8a3 3 0 0 0 -3 -3a9 9 0 0 0 -8 6a6 6 0 0 0 -5 3" />
+      <path d="M7 14a6 6 0 0 0 -3 6a6 6 0 0 0 6 -3" />
+      <circle cx="15" cy="9" r="1" />
+    </svg>
+  `
+}
+
+const publishFn = (editor) => {
+
+
+console.log('publish');
+
+  const modal = editor.Modal;
+  modal.open({
+    title: 'Publish my dApp',
+    content: PublishModal(),
+    attributes: { class: 'my-class' },
+  });
+
+  // if(confirm('Are you sure to clean the canvas?')) {
+    // var comps = editor.DomComponents.clear();
+    // setTimeout(function(){ localStorage.clear()}, 0)
+  // }
+}
+
 const Plugin = (editor, config) => {
     const pn = editor.Panels;
     const eConfig = editor.getConfig();
@@ -139,22 +190,10 @@ const Plugin = (editor, config) => {
                 <line x1="11" y1="19.94" x2="11" y2="19.95"></line>
             </svg>
         `
-      },{
-        id: cmdClear,
-        // className: 'fa fa-trash',
-        command: e => e.runCommand(cmdClear),
-        attributes: { title: 'Clear Canvas'},
-        label: `
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-trash" width="24" height="24" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <line x1="4" y1="7" x2="20" y2="7"></line>
-                <line x1="10" y1="11" x2="10" y2="17"></line>
-                <line x1="14" y1="11" x2="14" y2="17"></line>
-                <path d="M5 7l1 12a2 2 0 0 0 2 2h8a2 2 0 0 0 2 -2l1 -12"></path>
-                <path d="M9 7v-3a1 1 0 0 1 1 -1h4a1 1 0 0 1 1 1v3"></path>
-            </svg>
-        `
-      }],
+      },
+      clearCanvasButton,
+      publishButton
+    ],
     },{
       id: 'views',
       buttons  : [{
@@ -274,23 +313,7 @@ const Plugin = (editor, config) => {
 
     var cmdm = editor.Commands;
 
-    cmdm.add(publish, () => {
-
-
-
-
-      const modal = editor.Modal;
-      modal.open({
-        title: 'My title',
-        content: LoginModal(),
-        attributes: { class: 'my-class' },
-      });
-
-      // if(confirm('Are you sure to clean the canvas?')) {
-        // var comps = editor.DomComponents.clear();
-        // setTimeout(function(){ localStorage.clear()}, 0)
-      // }
-    });
+    cmdm.add(cmdPublish, () => publishFn(editor));
 
     cmdm.add('canvas-clear', () => {
 

@@ -76,6 +76,11 @@ REACT_APP_MORALIS_SERVER_URL=<URL>
 REACT_APP_HOST_ENV=local
 ```
 
+Add Tailwind via CDN import to parent project in header inside index.html
+```
+<script src="https://cdn.tailwindcss.com"></script>
+```
+
 Start the dev server
 
 ```sh

@@ -1,6 +1,11 @@
 const PublishModal = () => {
     return (`
         <div>
+
+        <h1 className="text-3xl font-bold underline">
+        Hello world!
+      </h1>
+      
             <p class='inline'><h4>Hi, <strong><span id="current-email"></span></strong> <button onclick="handleSwitchAccount(event)" type="button" class="btn btn-light">Switch account</button></h4> </p>
             <p>Do you want yo publish a new revision of your template to IPFS, the permanent web?</p>
         
@@ -16,7 +21,7 @@ const PublishModal = () => {
             </div>
 
 
-            <button id="publish-btn" class="w-100 btn btn-lg btn-primary" type="submit" onclick="handlePublishToIpfs(event)">Publish</button>
+            <button id="publish-btn" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="submit" onclick="handlePublishToIpfs(event)">Publish</button>
             <button id="wait-publish-btn" class="w-100 btn btn-lg btn-primary d-none" type="button" disabled>
             <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
             Publishing...

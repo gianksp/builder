@@ -9,12 +9,8 @@ body {
 }
 
 
-@import 'material-icons/iconfont/material-icons.css';
+@import 'material-icons/iconfont/material-icons.scss';
 @import 'grapesjs/src/styles/scss/main.scss';
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
 // Devices
 .device-tablet {
