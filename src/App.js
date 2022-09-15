@@ -10,7 +10,13 @@ function App() {
   //     authenticate({ provider: 'metamask' });
   // }, [user]);
 
-  const editor = isAuthenticated && (<Editor projectId={process.env.REACT_APP_PROJECT_ID}/>);
+  const onClickHome = () => {
+    console.log('Clicked home');
+  }
+
+  const editor = isAuthenticated && (
+    <Editor projectId={process.env.REACT_APP_PROJECT_ID} onClickHome={onClickHome}/>
+  );
   return editor;
 }
 
