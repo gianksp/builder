@@ -53,6 +53,7 @@ const Editor = ({ projectId, onClickHome }) => {
 
             // Save as project
             project.set('url', url);
+            project.set('hash', hash);
             await project.save();
         }
     }
