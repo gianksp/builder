@@ -22,6 +22,10 @@ const Editor = ({ projectId, onClickHome }) => {
 
     const loadFns = () => {
         window.handlePublishToIpfs = async(event) => {
+            event.preventDefault();
+            event.target.parentNode.querySelector('#publish-btn').style.display = 'none';
+            event.target.parentNode.querySelector('#wait-publish-btn').style.display = 'block';
+
             const html = editor.getHtml();
             const css = editor.getCss();
                 

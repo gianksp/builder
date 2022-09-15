@@ -1,6 +1,6 @@
 {
   "name": "dappify-builder",
-  "version": "0.1.11",
+  "version": "0.1.12",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
@@ -13,6 +13,7 @@
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
     "@web3auth/web3auth": "^1.0.0",
+    "bootstrap": "^5.2.1",
     "grapesjs": "^0.19.5",
     "grapesjs-tailwind": "^1.0.7",
     "grapesjs-tooltip": "^0.1.5",
