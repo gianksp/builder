@@ -74,6 +74,7 @@ REACT_APP_MIXPANEL_ID=<ID>
 REACT_APP_MORALIS_APP_ID=<ID>
 REACT_APP_MORALIS_SERVER_URL=<URL>
 REACT_APP_HOST_ENV=local
+REACT_APP_PROJECT_ID=<TEST_PROJECT_ID_MORALIS>
 ```
 
 Add Tailwind via CDN import to parent project in header inside index.html
