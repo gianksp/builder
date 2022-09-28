@@ -36,10 +36,12 @@ const Editor = ({ projectId, onClickHome }) => {
             const content = `
                 <!doctype html>
                 <html lang="en">
-                    <head>
-                        <style tyle="text/css">${css}</style>
-                    </head>
-                    ${html}
+                  <head>
+                    <meta charset="UTF-8">
+                    <script src="https://cdn.tailwindcss.com"></script>
+                    <style tyle="text/css">${css}</style>
+                  </head>
+                  ${html}
                 </html>`;
 
             // Upload to IPFS
