@@ -1,6 +1,6 @@
 {
   "name": "dappify-builder",
-  "version": "0.1.15",
+  "version": "0.1.18",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
@@ -15,6 +15,7 @@
     "@web3auth/web3auth": "^1.0.0",
     "bootstrap": "^5.2.1",
     "dappify-tailwind-module": "^1.0.1",
+    "dappify-wallet-module": "^1.0.9",
     "grapesjs": "^0.19.5",
     "grapesjs-plugin-forms": "^2.0.5",
     "grapesjs-react": "^4.0.1",

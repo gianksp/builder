@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import grapesjs from 'grapesjs'
-// import PluginTailwind from 'grapesjs-tailwind';
+import PluginWallet from 'dappify-wallet-module'
 import PluginTailwind from 'dappify-tailwind-module';
 import PluginEditorPanelButtons from './Panel/Buttons';
 import * as LandingPage from '../templates/LandingPage';
@@ -38,7 +38,12 @@ const Editor = ({ projectId, onClickHome }) => {
                 <html lang="en">
                   <head>
                     <meta charset="UTF-8">
+                    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
                     <script src="https://cdn.tailwindcss.com"></script>
+                    <script src="https://cdn.ethers.io/lib/ethers-5.0.umd.min.js"></script>
+                    <script src="https://unpkg.com/web3modal@1.9.0/dist/index.js"></script>
+                    <script src="https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js"></script>
+                    <script src="https://unpkg.com/@walletconnect/web3-provider@1.3.1/dist/umd/index.min.js"></script>
                     <style tyle="text/css">${css}</style>
                   </head>
                   ${html}
@@ -94,22 +99,21 @@ const Editor = ({ projectId, onClickHome }) => {
             selectorManager: { escapeName },
             plugins: [
                 PluginTailwind,
-                PluginEditorPanelButtons
+                PluginEditorPanelButtons,
+                PluginWallet
             ],
             pluginsOpts: {},
             canvas: {
                 scripts: [
-                //   'https://cdn.tailwindcss.com',
-                //   'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js',
-                //   'https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js',
-                //   'https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js',
-                //   'https://cdnjs.cloudflare.com/ajax/libs/ethers/5.6.9/ethers.umd.min.js',
-                //   'https://cdn.jsdelivr.net/npm/chart.js'
+                    'https://cdn.ethers.io/lib/ethers-5.0.umd.min.js',
+                    'https://unpkg.com/web3modal@1.9.0/dist/index.js',
+                    'https://unpkg.com/evm-chains@0.2.0/dist/umd/index.min.js',
+                    'https://unpkg.com/@walletconnect/web3-provider@1.3.1/dist/umd/index.min.js'
                 ],
                 // The same would be for external styles
-                // styles: [
-                //   'https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css'
-                // ],
+                styles: [
+                    'https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css'
+                ],
             }
         });
 
