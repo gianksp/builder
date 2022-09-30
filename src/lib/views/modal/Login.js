@@ -1,14 +1,12 @@
-
 window.handleAuth = async (e) => {
-    e.preventDefault();
-    console.log("gg");
+  e.preventDefault();
+  console.log("gg");
   //   // alert("The form was submitted");
-  
-  
+
   //   var inputs = document.getElementById("signin-form").elements;
   // var inputByName = inputs["email"]
   // console.log(inputByName.value);
-  
+
   //   let user = Moralis.User.current();
   //   console.log(user);
   //     if (!user) {
@@ -23,7 +21,7 @@ window.handleAuth = async (e) => {
   //         network: "ropsten",
   //       }
   //       user = await Moralis.authenticate(props)
-  
+
   //       if (!user.get('email')) {
   //         try {
   //           user.set('email', props.email);
@@ -35,26 +33,24 @@ window.handleAuth = async (e) => {
   //       }
   //       console.log("logged in user:", user);
   //       console.log(user.get("ethAddress"));
-  
-        // $('.modal-title').html('Ready to publish?');
-        // $('.modal-body').html(PublishModal);
-        // $('#current-email').text(user.get('email'))
-        // $('#modal-view').modal('show');
-  
-        // $('#login-panel').modal('hide');
-        // $('#current-email').text(props.email)
-        // $('#publish-panel').modal('show');
-  
-        // $("#submit-link-btn").removeClass('d-none');
-        // $("#wait-link-btn").addClass('d-none');
-  
-    // }
-  
-  }
 
-  
+  // $('.modal-title').html('Ready to publish?');
+  // $('.modal-body').html(PublishModal);
+  // $('#current-email').text(user.get('email'))
+  // $('#modal-view').modal('show');
+
+  // $('#login-panel').modal('hide');
+  // $('#current-email').text(props.email)
+  // $('#publish-panel').modal('show');
+
+  // $("#submit-link-btn").removeClass('d-none');
+  // $("#wait-link-btn").addClass('d-none');
+
+  // }
+};
+
 const LoginModal = () => {
-    return (`
+  return `
         <form id="signin-form" onsubmit="handleAuth(event)">
             <div class="text-center">
             <img class="mb-4" src="./assets/img/dappify-logo-full.png" alt="" width="200" height="auto" />
@@ -73,7 +69,7 @@ const LoginModal = () => {
             Preparing link...
             </button>
         </form>
-    `)
-}
+    `;
+};
 
 export default LoginModal;

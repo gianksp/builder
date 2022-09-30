@@ -1,5 +1,5 @@
 const ConfirmationModal = ({ url, hash, uri }) => {
-    return (`
+  return `
         <div class="alert alert-success" role="alert">
             <div class="flex">
                 <div>
@@ -10,7 +10,7 @@ const ConfirmationModal = ({ url, hash, uri }) => {
                 </div>
             </div>
         </div>
-    `)
-}
+    `;
+};
 
 export default ConfirmationModal;

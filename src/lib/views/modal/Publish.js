@@ -1,5 +1,5 @@
 const PublishModal = () => {
-    return (`
+  return `
         <div>
 
             <p>Do you want yo publish a new revision of your template to IPFS, the permanent web?</p>
@@ -21,7 +21,7 @@ const PublishModal = () => {
                 Publishing...
             </button>
         </div>
-    `)
-}
+    `;
+};
 
 export default PublishModal;

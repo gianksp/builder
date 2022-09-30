@@ -1,9 +1,9 @@
-import React, { useEffect, useContext } from 'react';
-import { Editor } from 'lib';
-import { DappifyContext } from 'react-dappify';
+import React, { useEffect, useContext } from "react";
+import { Editor } from "lib";
+import { DappifyContext } from "react-dappify";
 
 function App() {
-  const {isAuthenticated, user, authenticate} = useContext(DappifyContext);
+  const { isAuthenticated, user, authenticate } = useContext(DappifyContext);
 
   // useEffect(() => {
   //   if (!user)
@@ -11,11 +11,14 @@ function App() {
   // }, [user]);
 
   const onClickHome = () => {
-    console.log('Clicked home');
-  }
+    console.log("Clicked home");
+  };
 
   const editor = isAuthenticated && (
-    <Editor projectId={process.env.REACT_APP_PROJECT_ID} onClickHome={onClickHome}/>
+    <Editor
+      projectId={process.env.REACT_APP_PROJECT_ID}
+      onClickHome={onClickHome}
+    />
   );
   return editor;
 }

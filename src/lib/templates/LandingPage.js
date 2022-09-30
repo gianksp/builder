@@ -1184,7 +1184,4 @@ const style = `
   }
 `;
 
-export {
-    html,
-    style
-}
+export { html, style };

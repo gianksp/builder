@@ -1,6 +1,6 @@
 {
   "name": "dappify-builder",
-  "version": "0.1.19",
+  "version": "0.1.21",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "files": [
@@ -15,7 +15,7 @@
     "@web3auth/web3auth": "^1.0.0",
     "bootstrap": "^5.2.1",
     "dappify-tailwind-module": "^1.0.1",
-    "dappify-wallet-module": "^1.0.9",
+    "dappify-wallet-module": "^1.0.104",
     "grapesjs": "^0.19.5",
     "grapesjs-plugin-forms": "^2.0.5",
     "grapesjs-react": "^4.0.1",
@@ -36,7 +36,8 @@
     "build": "rm -rf dist && NODE_ENV=production babel src/lib --out-dir dist --copy-files --ignore __tests__,spec.js,test.js,__snapshots__",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/lib -d dist --copy-files"
+    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/lib -d dist --copy-files",
+    "lint": "eslint --fix --ext .js,.jsx ."
   },
   "eslintConfig": {
     "extends": [
@@ -59,18 +60,35 @@
   "devDependencies": {
     "@babel/cli": "^7.18.10",
     "@babel/plugin-proposal-numeric-separator": "^7.18.6",
+    "@babel/plugin-transform-modules-amd": "^7.18.6",
     "@babel/preset-react": "^7.18.6",
+    "@testing-library/jest-dom": "^5.16.5",
     "autoprefixer": "^9.8.8",
+    "babel-eslint": "^10.0.3",
     "babel-preset-react": "^6.24.1",
     "babel-preset-react-app": "^10.0.1",
     "cross-env": "^7.0.3",
     "env-cmd": "^10.1.0",
     "enzyme": "^3.11.0",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "gh-pages": "^2.2.0",
+    "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.1",
     "lint-staged": ">=10",
+    "microbundle-crl": "^0.13.10",
+    "msw": "^0.35.0",
+    "npm-run-all": "^4.1.5",
     "postcss-cli": "^10.0.0",
     "postcss-import": "^15.0.0",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "requirejs": "^2.3.6"
   }
 }
