@@ -1,8 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import grapesjs from "grapesjs";
+
 import PluginWallet from "dappify-wallet-module";
 import PluginTailwind from "dappify-tailwind-module";
 import PluginSmartContract from "dappify-smart-contract-ui-module";
+import PluginNFT from "dappify-nft-module";
+import PluginTokenGate from "dappify-token-gate-module";
+import PluginActionButton from "dappify-action-button-module";
+
 import PluginEditorPanelButtons from "./Panel/Buttons";
 import * as LandingPage from "../templates/LandingPage";
 import ConfirmationModal from "../views/modal/Confirmation";
@@ -81,10 +86,18 @@ const Editor = ({ projectId, onClickHome }) => {
   const loadProject = async () => {
     const Proj = Provider.Object.extend("Project");
     const query = new Provider.Query(Proj);
+    console.log("SUPPPP");
+    console.log(user);
     query.equalTo("owner", user);
     query.equalTo("objectId", projectId);
     const foundProject = await query.first();
     setProject(foundProject);
+
+    // Set context
+    window.dappify = {
+      project: foundProject,
+    };
+
     setTimeout(() => {
       loadEditor();
     }, 1500);
@@ -109,6 +122,9 @@ const Editor = ({ projectId, onClickHome }) => {
         PluginEditorPanelButtons,
         PluginWallet,
         PluginSmartContract,
+        PluginTokenGate,
+        PluginNFT,
+        PluginActionButton,
       ],
       pluginsOpts: {},
       canvas: {

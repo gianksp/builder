@@ -26,4 +26,4 @@ yarn-error.log*
 yarn.lock
 dist
 build
-src/plugins/*
+src/lib/plugins
